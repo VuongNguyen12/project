@@ -20,8 +20,13 @@ export default function Header() {
         <div className='contain'>
             <Container>
                 <Navbar expand="sm" >
-                    <NavbarBrand href="/">KINGSPORTS</NavbarBrand>
-                    <NavbarToggler onClick={toggle} />
+                    <NavbarBrand href="/">KINGSPORTS</NavbarBrand>  
+                    <div className='header_right1'>
+                            <i class="fa-solid fa-magnifying-glass" ></i>
+                            <a className="me-3 ms-3" href='/account'>My Account</a>
+                            <div><i class="fa-solid fa-cart-plus"></i></div>
+                    </div> 
+                    <NavbarToggler onClick={toggle} />          
                     <Collapse isOpen={isOpen} className=" justify-content-center" navbar>
                         <Nav className="me-5" navbar>
                             <NavItem>
@@ -54,16 +59,28 @@ export default function Header() {
                                 </NavLink>
                             </NavItem>
 
-                        </Nav>
-                        <div className='header_right'>
+                        </Nav>   
+                         
+                    </Collapse>
+                    <div className='header_right'>
                             <i class="fa-solid fa-magnifying-glass" ></i>
                             <a className="me-3 ms-3" href='/account'>My Account</a>
-                            <div>Cart:<i class="fa-solid fa-cart-plus"></i></div>
-                        </div>
-                    </Collapse>
+                            <div><i class="fa-solid fa-cart-plus"></i></div>
+                    </div> 
+                    
                 </Navbar>
+
             </Container>
-            <img className='imgs' alt='images' src={home_img} />
+            <div className='banner'>
+                <div className='banner_left'>
+                    <h1><span>BOOST</span> your imnune system today</h1>
+                  <button>Shop Now</button>
+                </div>
+                <div className='banner_right'>
+                    <img className='imgs' alt='image_banner' src={home_img}/>
+                </div>
+            </div>
+            
         </div>
     )
 }
