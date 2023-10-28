@@ -58,13 +58,12 @@ export default function Header() {
                         <div className='header_right'>
                             <i class="fa-solid fa-magnifying-glass" ></i>
                             <a className="me-3 ms-3" href='/account'>My Account</a>
-                            <div>CART:<i class="fa-solid fa-cart-plus"></i></div>
+                            <div>Cart:<i class="fa-solid fa-cart-plus"></i></div>
                         </div>
                     </Collapse>
                 </Navbar>
             </Container>
             <img className='imgs' alt='images' src={home_img} />
-
         </div>
     )
 }
