@@ -1,34 +1,71 @@
 import { useState } from 'react';
 import './Header.css'
-import {
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    NavbarText,
-    Container,
-} from 'reactstrap';
+import {Collapse,Navbar,NavbarToggler,NavbarBrand, Nav,NavItem,NavLink,Container,} from 'reactstrap';
+import {Carousel,CarouselItem,CarouselControl,CarouselIndicators,CarouselCaption,} from 'reactstrap';
 import home_img from '../../img/home_img.png'
+const items = [
+    {
+      src:'https://ld-wp73.template-help.com/tf/demo_biona/biona_demo_v1/wp-content/uploads/2021/05/slide2-min.png',
+      altText: 'Slide 1',
+      caption: 'Slide 1',
+      key: 1,
+    },
+    {
+      src: 'https://ld-wp73.template-help.com/tf/demo_biona/biona_demo_v1/wp-content/uploads/2021/05/home-slide-min.png',
+      altText: 'Slide 2',
+      caption: 'Slide 2',
+      key: 2,
+    },
+  ];
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
+    
+      const [activeIndex, setActiveIndex] = useState(0);
+      const [animating, setAnimating] = useState(false);
+      const next = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        setActiveIndex(nextIndex);
+      };
+      const previous = () => {
+        if (animating) return;
+        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        setActiveIndex(nextIndex);
+      };
+      const goToIndex = (newIndex) => {
+        if (animating) return;
+        setActiveIndex(newIndex);
+      };
+      const slides = items.map((item) => {
+        return (
+          <CarouselItem
+            onExiting={() => setAnimating(true)}
+            onExited={() => setAnimating(false)}
+            key={item.src}
+          >
+            <img src={item.src} alt={item.altText} />
+          </CarouselItem>
+        );
+      });
+      
 
+
+
+    const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     return (
+<Container>
         <div className='contain'>
-            <Container>
+            
                 <Navbar expand="sm" >
-                    <NavbarBrand href="/">KINGSPORTS</NavbarBrand>  
+                    <NavbarBrand href="/">KINGSPORTS</NavbarBrand>
                     <div className='header_right1'>
-                            <i class="fa-solid fa-magnifying-glass" ></i>
-                            <a className="me-3 ms-3" href='/account'>My Account</a>
-                            <div><i class="fa-solid fa-cart-plus"></i></div>
-                    </div> 
-                    <NavbarToggler onClick={toggle} />          
+                        <i class="fa-solid fa-magnifying-glass" ></i>
+                        <a className="me-3 ms-3" href='/account'>My Account</a>
+                        <div><i class="fa-solid fa-cart-plus"></i></div>
+                    </div>
+                    <NavbarToggler onClick={toggle} />
                     <Collapse isOpen={isOpen} className=" justify-content-center" navbar>
-                        <Nav className="me-5" navbar>
+                        <Nav navbar>
                             <NavItem>
                                 <NavLink href="/">
                                     <h6>Home</h6>
@@ -37,50 +74,73 @@ export default function Header() {
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/Shop">
-                                <h6>Shop</h6>
+                                    <h6>Shop</h6>
                                     <i class="fa-solid fa-caret-down"></i>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/Blog">
-                                <h6>Blog</h6>
+                                    <h6>Blog</h6>
                                     <i class="fa-solid fa-caret-down"></i>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/Page">
-                                <h6>Page</h6>
+                                    <h6>Page</h6>
                                     <i class="fa-solid fa-caret-down"></i>
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/Contact">                              
-                                    <h6>Contact us</h6>                             
+                                <NavLink href="/Contact">
+                                    <h6>Contact us</h6>
                                 </NavLink>
                             </NavItem>
 
-                        </Nav>   
-                         
+                        </Nav>
+
                     </Collapse>
                     <div className='header_right'>
-                            <i class="fa-solid fa-magnifying-glass" ></i>
-                            <a className="me-3 ms-3" href='/account'>My Account</a>
-                            <div><i class="fa-solid fa-cart-plus"></i></div>
-                    </div> 
-                    
+                        <i class="fa-solid fa-magnifying-glass" ></i>
+                        <a className="me-3 ms-3" href='/account'>My Account</a>
+                        <div><i class="fa-solid fa-cart-plus"></i></div>
+                    </div>
+
                 </Navbar>
 
-            </Container>
+            
             <div className='banner'>
                 <div className='banner_left'>
                     <h1><span>BOOST</span> your imnune system today</h1>
-                  <button>Shop Now</button>
+                    <button>Shop Now</button>
                 </div>
                 <div className='banner_right'>
-                    <img className='imgs' alt='image_banner' src={home_img}/>
+                    <img className='imgs' alt='image_banner' src={home_img} />
                 </div>
             </div>
             
+            <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+    >
+      <CarouselIndicators
+        items={items}
+        activeIndex={activeIndex}
+        onClickHandler={goToIndex}
+      />
+      {slides}
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={next}
+      />
+    </Carousel>
         </div>
+        </Container>
     )
 }
