@@ -29,7 +29,6 @@
 
 .banner .banner_left h1{
     font-size: 76px;
-    font-family: 'Roboto', sans-serif;
 }
 .banner .banner_left span{
     color: #76CE16;
@@ -109,6 +108,52 @@
     height: 10px !important;
     border-radius: 100%;
 }
+.modal {
+    
+    --bs-modal-width: 100% !important;
+    opacity: 1;
+    --bs-modal-bg: none !important;
+    color: white !important;
+    padding: 50px;
+
+    
+}
+.modal-content{
+    border: none !important;
+}
+.modal button{
+    border: none;
+    text-align: end;
+    color: white;
+    font-size: 48px;
+}
+.modal-header{
+    border: none !important;
+}
+.search h1{
+    font-size: 64px !important;
+}
+input[type="text"]{
+    width: 90%;
+    padding: 20px;
+    outline: none;
+ 
+}
+.search .search1{
+    display: flex;
+    
+}
+.icon_search{
+    width: 10%;
+    padding: 20px;
+    background-color: red;
+    text-align: center;
+   
+}
+
+::placeholder {
+    color:black;
+  }
 
 @media only screen and (max-width: 1440px) {
     .imgs {
@@ -130,6 +175,14 @@
     }
     .banner .banner_left h1{
         font-size: 40px;
+    }
+    .banner .banner_left button{
+        padding: 10px 30px;
+        background: red;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 20px;
+        font-size: 16px;
     }
 }
 @media only screen and (max-width: 600px) {
