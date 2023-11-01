@@ -7,21 +7,7 @@ import home_img from '../../img/home_img.png'
 
 
 
-//Carousel
-const items = [
-  {
-    src: 'https://ld-wp73.template-help.com/tf/demo_biona/biona_demo_v1/wp-content/uploads/2021/05/slide2-min.png',
-    altText: 'HELLO',
-    caption: 'Slide 1',
-    key: 1,
-  },
-  {
-    src: 'https://ld-wp73.template-help.com/tf/demo_biona/biona_demo_v1/wp-content/uploads/2021/05/home-slide-min.png',
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-    key: 2,
-  },
-];
+
 
 
 
@@ -34,34 +20,6 @@ export default function Header() {
 
   const toggle1 = () => setModal(!modal);
 
-  //carousel
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [animating, setAnimating] = useState(false);
-  const next = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-    setActiveIndex(nextIndex);
-  };
-  const previous = () => {
-    if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-    setActiveIndex(nextIndex);
-  };
-  const goToIndex = (newIndex) => {
-    if (animating) return;
-    setActiveIndex(newIndex);
-  };
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-      </CarouselItem>
-    );
-  });
 
 
 
@@ -71,8 +29,8 @@ export default function Header() {
 
   
   return (
-    <div style={{ height: "600px" }}>
-      <Container style={{ height: "100%" }}>
+   
+      <Container>
         <div className='contain'>
 
           <Navbar expand="sm" >
@@ -92,23 +50,18 @@ export default function Header() {
                <h6>Home</h6>
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem>Option 0</DropdownItem>
-                <DropdownItem>Option 1</DropdownItem>
-               
-               
+                <DropdownItem>Home 1</DropdownItem>
+                <DropdownItem>Home 2</DropdownItem>
+                <DropdownItem>Home 3</DropdownItem>
+                <DropdownItem>Home 4</DropdownItem>
+                <DropdownItem>Home 5</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
 
 
                      
       
-                    <ul className='Home1'>
-                      <li><a href='#' />Home 1</li>
-                      <li><a href='#' />Home 2</li>
-                      <li><a href='#' />Home 3</li>
-                      <li><a href='#' />Home 4</li>
-                      <li><a href='#' />Home 5</li>
-                    </ul>
+                 
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -118,8 +71,11 @@ export default function Header() {
                <h6>Shop</h6>
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem>Option 3</DropdownItem>
+                <DropdownItem>Categories</DropdownItem>
+                <DropdownItem>Products Grid (Sidebar)</DropdownItem>
+                <DropdownItem>Single product 1</DropdownItem>
+                <DropdownItem>Single product 2</DropdownItem>
+                <DropdownItem>Single product 3</DropdownItem>
                
                
               </DropdownMenu>
@@ -129,13 +85,7 @@ export default function Header() {
 
 
                
-                    <ul className='Home1'>
-                      <li><a href='#' />Home 5</li>
-                      <li><a href='#' />Home 6</li>
-                      <li><a href='#' />Home 7</li>
-                      <li><a href='#' />Home 8</li>
-                      <li><a href='#' />Home 9</li>
-                    </ul>
+                   
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -145,20 +95,17 @@ export default function Header() {
                <h6>Blog</h6>
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem>Option 4</DropdownItem>
-                <DropdownItem>Option 5</DropdownItem>
+                <DropdownItem>Blog</DropdownItem>
+                <DropdownItem>Blog three grid</DropdownItem>
+                <DropdownItem>Blog two grid (Sidebar)</DropdownItem>
+                <DropdownItem>Single Post </DropdownItem>
+                <DropdownItem>Single Post(Sidebar)</DropdownItem>
                
                
               </DropdownMenu>
             </UncontrolledDropdown>
 
-                    <ul className='Home1'>
-                      <li><a href='#' />Home 10</li>
-                      <li><a href='#' />Home 11</li>
-                      <li><a href='#' />Home 12</li>
-                      <li><a href='#' />Home 13</li>
-                      <li><a href='#' />Home 14</li>
-                    </ul>
+                    
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -169,21 +116,18 @@ export default function Header() {
                <h6>Page</h6>
               </DropdownToggle>
               <DropdownMenu end>
-                <DropdownItem>Option 6</DropdownItem>
-                <DropdownItem>Option 7</DropdownItem>
+                <DropdownItem>FAQ</DropdownItem>
+                <DropdownItem>Our Story</DropdownItem>
+                <DropdownItem>Delivery</DropdownItem>
+                <DropdownItem>Our Location</DropdownItem>
+                <DropdownItem>Documentation</DropdownItem>
                
                
               </DropdownMenu>
             </UncontrolledDropdown>
 
 
-                    <ul className='Home1'>
-                      <li><a href='#' />Home 15</li>
-                      <li><a href='#' />Home 16</li>
-                      <li><a href='#' />Home 17</li>
-                      <li><a href='#' />Home 18</li>
-                      <li><a href='#' />Home 19</li>
-                    </ul>
+                    
                   </NavLink>
                 </NavItem>
                 <NavItem>
@@ -206,39 +150,8 @@ export default function Header() {
           </Navbar>
 
 
-          <div className='banner'>
-            <div className='banner_left'>
-              <h1><span>BOOST</span> your imnune system today</h1>
-              <button>Shop Now</button>
-            </div>
-            <div className='banner_right'>
-              <img className='imgs' alt='image_banner' src={home_img} />
-            </div>
-          </div>
+       
 
-
-          <Carousel
-            activeIndex={activeIndex}
-            next={next}
-            previous={previous}
-          >
-            <CarouselIndicators
-              items={items}
-              activeIndex={activeIndex}
-              onClickHandler={goToIndex}
-            />
-            {slides}
-            <CarouselControl
-              direction="prev"
-              directionText="Previous"
-              onClickHandler={previous}
-            />
-            <CarouselControl
-              direction="next"
-              directionText="Next"
-              onClickHandler={next}
-            />
-          </Carousel>
 
 
           <Modal isOpen={modal} toggle={toggle1}>
@@ -253,12 +166,8 @@ export default function Header() {
               </div>
             </ModalBody>
           </Modal>
-
-
-          
-     
         </div>
       </Container>
-    </div>
+    
   )
 }
