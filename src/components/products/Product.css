@@ -7,6 +7,7 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    margin: 10px 0px;
 
 }
 .card .card_info p {
@@ -45,6 +46,7 @@
     transition: .5s ease;
 
 }
+
 /* animation*/
 .card .img_discount{
     position: relative;
@@ -79,11 +81,15 @@
 .card:hover  .button{
     height: 50%;
     position: absolute;
-    bottom: 20px;
+    bottom:20px;
     left: 0;
     right: 0;
 }
 .card:hover .card_info1{
     transform: translateY(-110%);
     transition: .5s ease;
+}
+
+.card .button:hover{
+    background : var(--color-text-h1);
 }

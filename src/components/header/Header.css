@@ -15,7 +15,9 @@
     color: #fff;
     white-space: nowrap;
 }
-
+.header_right a:hover{
+    color: var(--color-button);
+}
 .header_right1 {
     display: none;
 }

@@ -1,7 +1,7 @@
 .footer{
     background:var(--bg-body) !important;
-    color: #BDBDBD;
-    border: 1px solid white;
+    color:var(--color-text-h6);
+    border: 1px solid var(--color-text-button);
     padding: 50px ;
     font-size: 13px;
 }
@@ -22,7 +22,7 @@
     background: #313131;
     text-align: center;
     font-size: 24px;
-    color: #BDBDBD;
+    color:var(--color-text-h6);
     margin-right: 10px;
     
 }
@@ -33,7 +33,7 @@
 .footer .footer_info a{
     
     text-decoration: none;
-    color:#BDBDBD ;
+    color:var(--color-text-h6) ;
 }
 .footer_menu{
     display: flex;
@@ -43,12 +43,12 @@
 }
 .footer_menu a{
     text-decoration: none;
-    color: #BDBDBD;
+    color: var(--color-text-h6);
     font-size: 16px;
     margin-bottom: 30px;
 }
 .footer_menu a:hover{
-    color: #FF0505;
+    color: var(--color-button);
 }
 .footer .footer_sub{
     width: 100%;
@@ -63,9 +63,9 @@
 }
 .footer_sub button{
     padding:10px;
-    background: #FF0505;
+    background: var(--color-button);
     border: none;
-    color: white;
+    color: var(--color-text-button);
 }
 .footer .footer_phone{
     display: flex;
@@ -79,15 +79,15 @@
 }
 .footer .footer_phone a{
     text-decoration: none;
-    color: white;
+    color: var(--color-text-button);
     font-size: 18px;
     text-transform: uppercase;
   }
  .footer .footer_contact .footer_sub ::placeholder {
-    color:  #BDBDBD;
+    color: var( --color-text-h6);
 }
 .footer_info .icons .ins:hover {
-    color: white;
+    color: var(--color-text-button);
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
 .footer_info .icons .fb:hover{
@@ -100,5 +100,5 @@
 }
 .footer_info .icons .yb:hover{
     color: white;
-    background: #FF0000;
+    background: var(--color-button);
 }

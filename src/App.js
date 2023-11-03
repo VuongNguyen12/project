@@ -6,9 +6,10 @@ import Product from './components/products/Product';
 function App() {
   return (
     <div>
-     {/* <Header/>
-     <Footer/> */}
+     <Header/>
      <Product/>
+     <Footer/>
+    
     </div>
   );
 }
