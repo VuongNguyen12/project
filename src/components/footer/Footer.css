@@ -1,9 +1,10 @@
 .footer{
-    background:var(--bg-body) !important;
+    /* background:var(--bg-body) !important; */
     color:var(--color-text-h6);
-    border: 1px solid var(--color-text-button);
+    /* border: 1px solid var(--color-text-button); */
     padding: 50px ;
     font-size: 13px;
+    margin-top: 90px;
 }
 .footer_info{
     width: 100%;
