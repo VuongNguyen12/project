@@ -39,7 +39,7 @@ export default function Banner1(){
     if (animating) return;
     setActiveIndex(newIndex);
   };
-  const slides = items.map((item) => {
+  const slides1 = items.map((item) => {
     return (
       <CarouselItem
         onExiting={() => setAnimating(true)}
@@ -91,7 +91,7 @@ export default function Banner1(){
               activeIndex={activeIndex}
               onClickHandler={goToIndex}
             />
-            {slides}
+            {slides1}
             <CarouselControl
               direction="prev"
               directionText="Previous"
@@ -101,8 +101,7 @@ export default function Banner1(){
               direction="next"
               directionText="Next"
               onClickHandler={next}
-            />
-            
+            />           
              </Carousel>  
              
              </div>

@@ -42,8 +42,8 @@ export default function Header() {
     <Container>
       <div className='contain'>
 
-        <Navbar expand="sm" >
-          <NavbarBrand href="/">KINGSPORTS</NavbarBrand>
+        <Navbar expand="md" >
+        <NavbarBrand href="/">KINGSPORTS</NavbarBrand>
           <div className='header_right1'>
             <i onClick={toggle1} className="fa-solid fa-magnifying-glass" ></i>
             <a className="me-3 ms-3" href='/account'>My Account</a>
@@ -80,37 +80,18 @@ export default function Header() {
             <NavItem>
             <div className='submenu'>
               <a href='/Blog'><h6>Blog</h6> </a>
-        <i onClick={toggle4} class="fa-solid fa-caret-down"></i>
               </div>
-              <Collapse isOpen={isOpen3}>
-        
-        <ul className='submenu_1'>
-              <li>Blog</li>
-              <li>Blog three grid</li>
-              <li>Blog two grid</li>
-              <li>Single post</li>
-  
-            </ul>
-           
-        </Collapse>
+            
             </NavItem>
        
             <NavItem>
             <div className='submenu'>
               <a href='/Page'><h6>Page</h6> </a>
-        <i onClick={toggle5} class="fa-solid fa-caret-down"></i>
+       
               </div>
-              <Collapse isOpen={isOpen4}>
         
-        <ul className='submenu_1'>
-              <li>FAQ</li>
-              <li>Our story</li>
-              <li>Delivery</li>
-              <li>404</li>
-  
-            </ul>
            
-        </Collapse>
+        
             </NavItem>
           
               <NavItem>

@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.policy{
+    width: 100%;
+    padding: 100px 20px;
+    background-image: url(../../img/home_bg2.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: var( --color-text-button);
+    margin: 100px 0px;
+}
+.policy p{
+    color:var( --color-text-h6) ;
+}
+.policy .policy1{
+    display: flex ;
+    align-items: center;
+
+}
+.policy .policy1 .colum{
+    width: calc(100% / 3);
+    margin: 20px;
+}
+.policy .policy1 .colum img{
+   max-width: 50%;
+    height: auto;
+}
+.Actual{
+    text-align: center;
+    padding: 0px 100px;
+}
+.Actual1{
+    display: flex;
+}
+.Actual1 .cardview{
+    width: calc(100% / 3);
+    margin: 10px;
+    background: var(--bg-body);
+    text-align: left;
+}
+.Actual1 .cardview img{
+    max-width: 100%;
+    height: auto;
+}
+.Actual1 .cardview .blog_info{
+    padding: 15px 10px;
+}
+.Actual1 .cardview .blog_info h3 a{
+    text-decoration: none;
+    font-size: 21px;
+      font-weight: bold;
+      color: var(--color-text-button);
+}
+.Actual1 .cardview .blog_info p{
+    color: var(--color-text-h6);
+}
+.Actual1 .cardview .blog_info button{
+     background: var(--color-button);
+     padding: 10px 20px;
+     color: var(--color-text-h6);
+     border: none;
+     font-weight: bold;
+}
+.Actual1 .cardview .blog_info button i{
+    margin: 5px 10px;
+}
+.Actual1 .cardview .blog_info button:hover{
+    background: green;
+}
+.instagram{
+    width: 100%;
+    margin: 50px 0px;
+}
+.instagram .contain1{
+    display: flex;
+   
+   
+}
+.instagram .contain1 .insta{
+    position: relative;
+     width: calc(100% / 4);
+}
+.instagram .contain1 .insta img{
+    max-width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+
+.contain1 .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+   color: white;
+  }
+  .contain1 .insta:hover{
+    background: var(--color-button);
+  }
+  .contain1 .insta:hover .middle {
+    opacity: 1;
+  }
+  .contain1 .insta:hover img {
+    opacity: 0.3;
+  }
+  .slides2{
+    position: relative;
+    height: 100px;
+  }
+  .slides2 .carousel{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+@media only screen and (max-width: 770px) {
+    .Actual1{
+        flex-direction: column;
+    }
+    .Actual1 .cardview{
+        width: calc(100%);
+        height: auto;
+       
+    }
+    .instagram .contain1{
+        flex-direction: column;
+         
+      }
+      .instagram .contain1 .insta{
+          width: calc(100% );
+     }
+    
+  }
+@media only screen and (max-width: 600px) {
+    .policy .policy1{
+        flex-direction: column;
+          align-items: center;
+    }
+    .policy .policy1 .colum img{
+       max-width: 100%;
+    }
+   
+      
+  }

@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.header_right {
+/* .header_right {
     display: flex;
     align-items: center;
 
@@ -18,7 +18,7 @@
 
 .header_right1 {
     display: none;
-}
+} */
 
 .banner {
     width: 100%;
@@ -201,10 +201,7 @@
         margin-top: 20px;
         font-size: 16px;
     }
-
-    .header_right {
-        display: none;
-    }
+ 
 
     .banner {
         margin-bottom: 500px;
@@ -250,7 +247,7 @@
     }
 
 
-    .header_right1 {
+    /* .header_right1 {
         display: block;
     }
 
@@ -259,15 +256,10 @@
         align-items: center;
     }
 
-    .header_right1 a {
-        text-decoration: none;
-        color: #fff;
-        white-space: nowrap;
-    }
-
+   
     .header_right {
         display: none;
-    }
+    } */
 
 
     .carousel-control-prev {
