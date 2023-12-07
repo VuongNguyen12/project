@@ -1,0 +1,28 @@
+.Page404{
+    text-align: center;
+}
+.Page404 .Page404_text{
+    margin-bottom:50px ;
+}
+.Page404 .Page404_text h1{
+    font-weight: bold;
+    font-size: 206px;
+}
+.Page404 button{
+    background: var(--color-button);
+    border: none;
+    padding: 10px 30px;
+}
+.Page404 button a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .Page404 .Page404_text h1{
+       
+        font-size: 80px;
+    }
+  }

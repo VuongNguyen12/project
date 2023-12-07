@@ -5,6 +5,7 @@ import './Banner.css'
 import energy from"../../img/energy.png"
 import power from"../../img/power.png"
 import health from"../../img/health.png"
+import { Link } from 'react-router-dom';
 //Carousel
 const items = [
     {
@@ -55,7 +56,7 @@ export default function Banner1(){
          <div className='banner'>
           <div className='banner_left'>
                 <h1><span>BOOST</span> your imnune system today</h1>
-                <button>Shop Now</button>
+                <button><Link to='/Shop'>Shop Now</Link></button>
               </div>
               <div className='banner_right'>
                 <img className='imgs' alt='image_banner' src={home_img} />
@@ -66,19 +67,19 @@ export default function Banner1(){
                 <img style={{width:"44px"}} alt="energy" src={energy}/>
                 <h3>Crazy energy</h3>
                 <p>But I must explain to you how all this mistaken idea pleasure</p>
-                <i class="fa-solid fa-arrow-right-long"></i>
+               <Link to='/Page404'><i class="fa-solid fa-arrow-right-long"></i></Link> 
               </div>
               < div className='col 2'>
                 <img style={{width:"44px"}} alt='power' src={power}/>
                 <h3>Maximum power</h3>
                 <p>But I must explain to you how all this mistaken idea pleasure</p>
-                <i class="fa-solid fa-arrow-right-long"></i>
+                <Link to='/Page404'><i class="fa-solid fa-arrow-right-long"></i></Link> 
               </div>
               <div className='col 3'>
               <img style={{width:"44px"}} alt='health' src={health}/>
                 <h3>Quality health</h3>
                 <p>But I must explain to you how all this mistaken idea pleasure</p>
-                <i class="fa-solid fa-arrow-right-long"></i>
+                <Link to='/Page404'><i class="fa-solid fa-arrow-right-long"></i></Link> 
               </div>
               </div>
               <Carousel

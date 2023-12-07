@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact_us{
+    display: flex;
+}
+.contact{
+    text-align:left;
+    width: 60%;
+}
+ .text_contact{
+    width: 100%;
+    text-align: center;
+}
+.contact .contact_info{
+   width: 100%;
+}
+.contact .contact_info .name{
+  
+    margin: 20px 0px;
+}
+.contact .contact_info .name input{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px gray;
+    border: none;
+
+}
+.contact .contact_info .email_phone{
+    display: flex;
+    width: 100%;
+    margin: 20px 0px;
+}
+.contact .contact_info .email_phone .email{
+    width: 50%;
+    margin-right: 15px;
+}
+.contact .contact_info .email_phone .phone{
+    width: 50%;
+   
+}
+.contact .contact_info .comment2{
+    width: 100%;
+
+}
+.contact .contact_info .comment2 textarea{
+    width: 100%;
+    outline: none;
+}
+.contact .contact_info .email_phone input{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px gray;
+    border: none;
+}
+.contact .contact_info  .sub{
+    padding: 10px 20px;
+    background: var(--color-button);
+    color: white;
+    border: none;
+ }
+ .contact .contact_info  .sub:hover{
+    background: var( --bg-body);
+ }
+ .contact_us .contact_address{
+    width: 40%;
+    margin: 20px  ;
+   text-align:center;
+ }
+ .contact_us .contact_address .address1{
+ margin-bottom: 20px;
+ }
+ .contact_us .contact_address .address1 a{
+text-decoration: none;
+color: var(--color-button);
+ }
+ @media only screen and (max-width: 576px) {
+    .contact_us{
+      
+        flex-wrap: wrap;
+    }
+    .contact{
+        width: 100%;
+    }
+    .contact_us .contact_address{
+        width: 100%;
+        text-align: left;
+        margin-left: 0px  ;
+     }
+     .contact .contact_info .email_phone{
+       flex-direction: column;
+     }
+     .contact .contact_info .email_phone .email{
+        width: 100%;
+        margin-right: 15px;
+    }
+    .contact .contact_info .email_phone .phone{
+        width: 100%;
+       
+    }
+  }

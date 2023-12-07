@@ -16,9 +16,12 @@
 }
 .product_left1 button{
     padding: 10px 20px;
-    color: #fff;
     background: var(--color-button);
     border: none;
+}
+.product_left1 button a{
+    color: white;
+    text-decoration: none;
 }
 
 .product_left .product_left1 button:hover{
@@ -56,9 +59,12 @@
 }
 .product2_left button{
     padding: 10px 20px;
-    color: #fff;
     background: var(--color-button);
     border: none;
+}
+.product2_left button a{
+    color: white;
+    text-decoration: none;
 }
 .product2_left p{
     margin: 30px 0px ;
@@ -89,6 +95,7 @@
     }
     .product2{
         background-image: none;
+        height: auto;
     }
     .product2_left{
         width: 100%;

@@ -12,19 +12,21 @@ import product_10 from "../../img/product_10.png"
 import Product from '../product/Product';
 import { Col, Container, Row } from 'reactstrap';
 import "./Products.css";
+import { Link } from 'react-router-dom';
 export default function Products() {
+
   const [time, setTime] = useState('');
-  const day = new Date().getYear(); 
-  const hours = new Date().getHours(); 
-  const min = new Date().getMinutes(); 
-   const sec = new Date().getSeconds();
-  useEffect(() => {  
+  const day = new Date().getYear();
+  const hours = new Date().getHours();
+  const min = new Date().getMinutes();
+  const sec = new Date().getSeconds();
+  useEffect(() => {
     setTimeout(() => {
       setTime(
-        day +':' + hours + ':' + min + ':' + sec
+        day + ':' + hours + ':' + min + ':' + sec
       );
     }, 1000);
-    
+
   }, [time]);
 
 
@@ -45,62 +47,67 @@ export default function Products() {
     <>
       <Container>
         <Row style={{ textAlign: "center", flexDirection: "row-reverse" }}>
-          <h1>Recent products</h1>
-          <p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
-          {data.slice(0, 6).map((product, index) => (
-            (
-              <Product key={index} name={product.name} newprice={product.Newprice} oldprice={product.Oldprice} product={product.img} img={arr[index]} /*img={arr[Math.floor(Math.random() *(10))+ 1 ] }*/ />
-            )
-          ))
-          }    
-         
-          <Col className='product_left' md="12" lg="6">
-            <div className='product_left1'>
-              <h1>Eat <span style={{ color: "green" }}>Right</span> Move More</h1>
-              <button>Shop Now</button>
-            </div>
-
-          </Col>
-          <Col sm="12">
-            <div className='product2'>
-              <div className='product2_left'>
-                <h1>
-                  Eat right,Live strong.
-                </h1>
-                <p><strong>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</strong></p>
-                <button>Shop Now</button>
-              </div>
-
-            </div>
-          </Col>
-         
-            <h1>Promotions of the week</h1>
-            <div className='timer'>
-              <div className='time day'>
-               <h5> {day}</h5>
-                Days
-              </div>
-              <div className='time hour'>
-               <h5>{hours}</h5> 
-                Hours
-              </div>
-              <div className='time minutes'>
-              <h5>{min}</h5> 
-                Minutes
-              </div>
-              <div className='time second'>
-              <h5>{sec}</h5> 
-                  Seconds
-              </div>
-              </div> 
-            {data.slice(0,4).map((product, index) => (
-              (
-                <Product key={index} name={product.name} newprice={product.Newprice} oldprice={product.Oldprice} product={product.img} img={arr.slice(5,9)[index]} />
+        <h1>Recent products</h1>
+        <p>But I must explain to you how all this mistaken idea of denouncing pleasure</p>
+        {data.slice(0, 6).map((product, index) => (
+          (
+            <>
+            {/* <Link to={`/Products/${product.id}`}> */}
+                <Product key={index} name={product.name} newprice={product.Newprice} oldprice={product.Oldprice} product={product.img} img={arr[index]} /*img={arr[Math.floor(Math.random() *(10))+ 1 ] }*/ />       
+              {/* </Link> */}
+              </>
               )
-            ))
-            }
-           
-        </Row>
+              ))
+       
+          }
+
+              <Col className='product_left' md="12" lg="6">
+                <div className='product_left1'>
+                  <h1>Eat <span style={{ color: "green" }}>Right</span> Move More</h1>
+                  <button> <Link to='/Shop'>Shop Now</Link></button>
+                </div>
+
+              </Col>
+              <Col sm="12">
+                <div className='product2'>
+                  <div className='product2_left'>
+                    <h1>
+                      Eat right,Live strong.
+                    </h1>
+                    <p><strong>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</strong></p>
+                    <button><Link to='/Shop'>Shop Now</Link></button>
+                  </div>
+
+                </div>
+              </Col>
+
+              <h1>Promotions of the week</h1>
+              <div className='timer'>
+                <div className='time day'>
+                  <h5> {day}</h5>
+                  Days
+                </div>
+                <div className='time hour'>
+                  <h5>{hours}</h5>
+                  Hours
+                </div>
+                <div className='time minutes'>
+                  <h5>{min}</h5>
+                  Minutes
+                </div>
+                <div className='time second'>
+                  <h5>{sec}</h5>
+                  Seconds
+                </div>
+              </div>
+              {data.slice(0, 4).map((product, index) => (
+                (
+                  <Product key={index} name={product.name} newprice={product.Newprice} oldprice={product.Oldprice} product={product.img} img={arr.slice(5, 9)[index]} />
+                )
+              ))
+              }
+
+            </Row>
       </Container>
     </>
   )

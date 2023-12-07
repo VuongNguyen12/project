@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ProductDetail{
+ width: 100%;
+}
+.ProductDetail span{
+   font-size: 20px;
+   color: var(--color-button);
+   font-weight: bold;
+}
+.ProductDetail .form-select{
+   border: 1px solid black;
+}
+
+.ProductDetail .imagedetail i{
+    color: black !important;
+ }
+ .ProductDetail .imagedetail img{
+    width: 70%;
+    height: auto;
+ }
+ .ProductDetail .number_product{
+   display: flex;
+   width: 100%;
+   height: 50px;
+   margin: 20px 0px;
+ }
+
+ .ProductDetail .number{
+   width: 20%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 20px;
+   border: 1px solid black;
+  
+ }
+ .ProductDetail .number_product .number .number_count{
+  margin: 10px 15px;
+ }
+ .ProductDetail .number_product .number .icon_box{
+   display: none;
+ }
+ .ProductDetail .number_product .number .icon_count{
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .ProductDetail .add{
+   width: 80%;
+   height: 100%;
+   border: none;
+   background: var(--color-button);
+   font-weight: bold;
+   color: white;
+ }
+ .productimg{
+    width: 100%;
+ }
+ .imagedetail{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    /* width: 100%;
+    height: 700px; */
+ }
+ /* .ProductDetail .imagedetail .img11{
+   display: none;
+   transform: translateX(110%);
+   transition: 1s;
+ }
+ .ProductDetail .imagedetail .img11.active{
+   display:block ;  
+   transform: translate(0%);
+   
+ }
+ .ProductDetail .imagedetail .img1{
+  display: none; 
+   transform: translateX(-110%);
+ }
+ .ProductDetail .imagedetail .img1.active{
+   display: block;
+   transform: translateX(0%);
+   transition: 1s;
+  
+ } */
+  .imagedetail h6 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-button);
+    padding: 3px 5px;
+    color: var(--color-text-button);
+    text-transform: uppercase;
+    font-size: 13px;
+}
+ .imagedetail i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 5px;
+    color: var(--color-text-button);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.detailimg{
+    display: flex;
+    width: 100%;
+}
+.detailimg img{
+   width: 30%;
+   height: auto;
+}
+
+.ProductDetail .number:hover .icon_box{
+   display: block;
+}
+.ProductDetail .info_product1{
+   width: 80%;
+   margin: 50px 0px;
+}
+.ProductDetail .info_product1 .info_box{
+   display: flex;
+   margin-bottom: 20px;
+}
+.ProductDetail .info_product1 .info_box .description{
+   border: 1px solid black;
+   margin-right: 10px;
+   padding: 5px 10px;
+  
+}
+.ProductDetail .info_product1  .box1{
+   display: none;
+}
+.ProductDetail .info_product1  .box2{
+   display: none;
+}
+.ProductDetail .info_product1  .box3{
+   display: none;
+}
+
+.ProductDetail .info_product1.active1 .box1{
+   display: block;
+}
+.ProductDetail .info_product1.active2 .box2{
+   display: block;
+}
+.ProductDetail .info_product1.active3 .box3{
+   display: block;
+}
+.ProductDetail .info_product1 .info_box .description:hover{
+   background: var(--color-button);
+   font-weight:bolder;
+   color: white;
+}    
+.ProductDetail .info_product1 .box3 .comment1{
+   display: flex;
+   margin: 20px;
+   align-items: center;
+}                     
+.ProductDetail .info_product1 .box3 .comment1 img {
+   width: 20%;
+   height: auto;
+   border-radius: 100%;
+   margin-right: 20px;
+}
+.ProductDetail .info_product1 .box3 .form_input{
+   display: flex;
+   width: 100%;
+}
+
+.ProductDetail .info_product1 .box3 .Review textarea{
+   width: 100%;
+   height:100px ;
+   outline: none;
+   border:1px solid gray;
+   padding: 5px;
+}
+.ProductDetail .info_product1 .box3 .form_input .name{
+   width: 50%;
+   margin-right:  10px;
+}
+.ProductDetail .info_product1 .box3 .form_input .email{
+   width: 50%;
+   margin-left: 10px;
+}
+.ProductDetail .info_product1 .box3 .form_input  input{
+   width: 100%;
+   padding: 10px;
+   outline: none;
+}
+.ProductDetail .info_product1 .box3  .sub{
+   padding: 10px 20px;
+   background: var(--color-button);
+   color: white;
+   border: none;
+}
+.ProductDetail .info_product1 .box3  .sub:hover{
+   background: var( --bg-body);
+}

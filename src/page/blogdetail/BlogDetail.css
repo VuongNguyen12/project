@@ -1,0 +1,47 @@
+.Blog{
+    margin-top: 100px;
+    padding: 0px 50px;
+    text-align: center;
+}
+.Blog img{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.Blog ul li{
+    text-align: left;
+}
+.Blog h5{
+    text-align: left;
+    margin: 50px 0px;
+}
+.Blog p{
+    text-align: left;
+    margin: 20px 0px;
+}
+.Blog .comnent{
+    position: relative;
+    border-left: 5px solid #FF0505;
+    padding: 5px;
+}
+.Blog .comnent i{
+    position: absolute;
+    top: 3px;
+    right:3px;
+}
+.Blog .blog_post{
+    display: flex;
+    align-items: center;
+}
+
+.Blog .blog_post .icons a{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height:24px;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 5px;
+    color: #191919;
+    
+}

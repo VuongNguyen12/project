@@ -1,0 +1,98 @@
+.account{
+    text-align: center;
+}
+.account label{
+    float: left;
+}
+.account  .name{
+    margin: 20px 0px;
+}
+.account .name input{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px gray;
+    border: none;
+
+}
+.account .email_phone{
+    display: flex;
+    width: 100%;
+    margin: 20px 0px;
+}
+.account .email_phone .email{
+    width: 50%;
+    margin-right: 15px;
+}
+.account .email_phone .phone{
+    width: 50%;
+   
+}
+.account .email_phone input{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px gray;
+    border: none;
+}
+.account .your_info .your_image{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-top: 50px;
+}
+.account .your_info .your_image .text_image p{
+          color: var(--color-text-h6);
+}
+.account .your_info .your_image .account_image{
+    display: flex;
+    width: 40%;
+    text-align: center;
+    align-items: center;
+   justify-content: flex-end;
+}
+.account .your_info .your_image .account_image img{
+    width: 20%;
+    height: auto;
+    border-radius: 100%;
+    margin: 10px;
+}
+.account .your_info .your_image .account_image .text_up_image{
+    box-shadow: 1px 1px 1px 1px gray;
+    color: var(--color-text-h6);
+    padding: 5px 3px;
+    text-align: center;
+}
+.account .your_info .your_image .account_image .text_up_image p{
+    margin-bottom: 0px;
+}
+.account .your_address input{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    box-shadow: 1px 1px 1px 1px gray;
+    border: none;
+
+}
+@media only screen and (max-width: 576px) {
+    .account .email_phone{
+       flex-direction: column;
+    }
+    .account .email_phone .email{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .account .email_phone .phone{
+        width: 100%;
+       margin-bottom: 10px;
+    }
+    .account .your_info .your_image{
+        flex-direction: column;
+    }
+    .account .your_info .your_image .account_image{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+     
+    }
+  }

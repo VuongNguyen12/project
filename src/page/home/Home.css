@@ -13,6 +13,14 @@
     color: var( --color-text-button);
     margin: 100px 0px;
 }
+.Header_menu{
+   position: relative;
+ height: 100vh;
+ margin-bottom: 250px;
+}
+.Header_menu .contain{
+    background: none;
+}
 .policy p{
     color:var( --color-text-h6) ;
 }
@@ -35,6 +43,10 @@
 }
 .Actual1{
     display: flex;
+}
+.Actual .Actual1 button a{
+    color: white;
+    text-decoration: none;
 }
 .Actual1 .cardview{
     width: calc(100% / 3);
@@ -112,15 +124,30 @@
   .contain1 .insta:hover img {
     opacity: 0.3;
   }
-  .slides2{
-    position: relative;
-    height: 100px;
+  .slides{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 20px ;
   }
-  .slides2 .carousel{
-    position: absolute;
-    top: 0;
-    left: 0;
+ .slides .slide1{
+         width:calc(100% / 4);
+         padding: 0px 20px;
+         opacity: .4;
+ }
+ .slides .slide1:hover{
+    opacity: 1;
+ }
+
+ @media only screen and (max-width: 900px) {
+    .slides .slide1{
+        width:calc(100% / 2);
+    }
+    .Header_menu{
+        margin-bottom: 300px;
+       }
   }
+ 
 
 @media only screen and (max-width: 770px) {
     .Actual1{
@@ -138,6 +165,9 @@
       .instagram .contain1 .insta{
           width: calc(100% );
      }
+     .Header_menu{
+      margin-bottom: 350px;
+     }
     
   }
 @media only screen and (max-width: 600px) {
@@ -148,6 +178,12 @@
     .policy .policy1 .colum img{
        max-width: 100%;
     }
-   
+    .slides .slide1{
+        width:calc(100%);
+        text-align: center;
+    }
+    .Header_menu{
+      margin-bottom: 600px;
+     }
       
   }

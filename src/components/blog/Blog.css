@@ -1,0 +1,26 @@
+.Blog1 img{
+    width: 100%;
+    height: auto;
+}
+.Blog1 .Blog_name{
+    padding: 0px 30px;
+    text-align: left;
+    margin: 10px auto;
+    font-size: 16px;
+}
+.Blog1 .Blog_name p{
+    margin: 15px 0px;
+}
+.Blog1 .Blog_name .Blog_button{
+    padding: 5px 10px; 
+    background: var(--color-button);
+    border: none;
+    font-size: 16px;
+}
+.Blog1 .Blog_name .Blog_button a{
+  color: white;
+  text-decoration: none;
+}
+.Blog1 .Blog_name .Blog_button:hover{
+    background: var(--bg-body);
+}

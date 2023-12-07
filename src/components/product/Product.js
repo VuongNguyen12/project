@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Product.css'
 import product_11 from "../../img/product_11.png"
 import { Col,} from 'reactstrap'
@@ -5,7 +6,7 @@ export default function Product(props) {
     return (
         
            
-                    <Col sm="12" md="6" lg="3">
+                    <Col sm="12" md="6" lg="3" className='col_card' >
                         <div className='card'>
                             <div className='img_discount'>
                                 <img className='img_info' alt='product_11' src={product_11} />
@@ -30,13 +31,12 @@ export default function Product(props) {
                                         <i className="fa-solid fa-star" style={{ color: "var(--color-button)" }}></i>
                                     </div>
                                 </div>
+                               <Link to='/ProductDetail'>
                                 <button className='button'>SELECT OPTIONS</button>
+                                </Link>
                             </div>
 
                         </div>
                     </Col>
-                    
-                
-       
     )
 }

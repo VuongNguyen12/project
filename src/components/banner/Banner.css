@@ -19,11 +19,9 @@
 .header_right1 {
     display: none;
 } */
-
 .banner {
     width: 100%;
-    height: 800px;
-    margin-bottom: 70px;
+    /* height: 800px; */
 
 }
 
@@ -32,11 +30,13 @@
     height: 100%;
     padding-top: 100px;
     padding-left: 50px;
+    z-index: 1;
 }
 
 /* .banner .banner_right {
     width: 50%;
     height: 100%;
+    z-index: 1;
 } */
 
 .banner .banner_left h1 {
@@ -50,10 +50,13 @@
 
 .banner .banner_left button {
     padding: 20px 50px;
-    background: red;
+    background:var( --color-button);
     text-transform: uppercase;
     color: #fff;
     margin-top: 20px;
+}
+.banner .banner_left button:hover{
+    background: var( --bg-body);
 }
 
 .imgs {
@@ -61,16 +64,17 @@
     position: absolute;
     top: 0px;
     right: 60px;
+    z-index: 1;
 
 }
 
 .carousel {
     width: 100% !important;
-    height: 100% !important;
+    /* height: 100% !important; */
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;
-    z-index: -1 !important;
+    /* z-index: -1 !important; */
 }
 
 .carousel img {
@@ -116,6 +120,7 @@
     color: var(--color-text-button);
     text-align: left;
     padding: 0px 50px;
+    z-index: 1;
 }
 
 .banner2 .col {
@@ -125,6 +130,9 @@
     background-size: cover;
     background-position: bottom right;
     background-repeat: no-repeat;
+}
+.banner2 .col a{
+    color: white;
 }
 
 .banner2 i {
@@ -140,7 +148,17 @@
 .banner2 .col h3 {
     margin: 20px 0px;
 }
-
+.banner .banner_left{
+    position: absolute;
+    top: 10%;
+    /* left: 30px; */
+    text-align: center;
+    margin: 0 auto;
+}
+.banner .banner_left button a{
+    color: white;
+    text-decoration: none;
+}
 
 
 @media only screen and (max-width: 1440px) {
@@ -150,7 +168,7 @@
         top: 10%;
         right: 30px;
     }
-
+    
     .banner .banner_right {
         width: 40%;
         height: 50%;
@@ -172,9 +190,7 @@
         right: 0;
 
     }
-    .banner {
-        margin-bottom: 70px;
-    }
+   
 }
 
 @media only screen and (max-width: 900px) {
@@ -203,9 +219,7 @@
     }
  
 
-    .banner {
-        margin-bottom: 500px;
-    }
+   
     .banner2 {
         position: absolute;
         top: 95%;
@@ -270,9 +284,7 @@
         display: none !important;
     }
 
-    .banner {
-        margin-bottom: 630px;
-    }
+   
 
     .banner2 .col {
         width: 100%;

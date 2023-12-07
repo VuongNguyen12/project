@@ -1,0 +1,72 @@
+.about_product{
+    width: 100%;
+    text-align: center;
+    margin: 100px 0px !important;
+}
+.about_product img{
+    width: 50%;
+    height: auto;
+}
+.about_product .button_about{
+    padding: 10px 25px;
+    background: var(--color-button);
+    color: white;
+    border: none;
+    margin-top:50px ;
+}
+.about_product .button_about:hover{
+    background: var(--bg-body);
+}
+.partner{
+    text-align: center;
+}
+.slides{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px 20px ;
+  }
+ .slides .slide1{
+         width:calc(100% / 4);
+         padding: 0px 20px;
+         opacity: .4;
+ }
+ .slides .slide1 img{
+    width: 80%;
+    height: auto;
+ }
+ .slides .slide1:hover{
+    opacity: 1;
+ }
+ .reponsi{
+    width: 50%;
+    text-align: center;
+    margin: 50px auto !important;
+ }
+.product2 .product2_left button{
+    padding: 10px 20px;
+    color: #fff;
+    background: var(--color-button);
+    border: none;
+}
+.product2 .product2_left button:hover{
+    background: var(--bg-body);
+}
+.Talk_about{
+    width: 100%;
+    text-align: center;
+    margin: 50px 0px;
+}
+ @media only screen and (max-width: 900px) {
+    .slides .slide1{
+        width:calc(100% / 2);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .slides .slide1{
+        width:calc(100%);
+        text-align: center;
+    }
+      
+  }

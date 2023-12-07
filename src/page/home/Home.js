@@ -24,6 +24,7 @@ import logo3 from '../../img/logo3.png'
 import logo4 from '../../img/logo4.png'
 import { Carousel, CarouselControl, CarouselIndicators, CarouselItem, Col, Container, Row } from "reactstrap"
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
 
@@ -33,9 +34,11 @@ export default function Home() {
 
       return (
             <>
-
+                  
+                  <div className='Header_menu'>
                   <Header />
                   <Banner1 />
+                  </div>
                   <Products />
                   <div className="policy">
                         <h1>30-day Money-Back Guarantee</h1>
@@ -65,8 +68,9 @@ export default function Home() {
                                     <div className='blog_info'>
                                           <h3> <a href='#'>How to Smoke MonRocks, Cannabis</a></h3>
                                           <p>We were recently contacted by a world-renowned interior designer as their client required a narrow…</p>
-                                          <button>READ MORE
+                                          <button><Link to='/BlogDetail'>READ MORE
                                                 <i class="fa-solid fa-arrow-right-long"></i>
+                                                </Link>
                                           </button>
                                     </div>
 
@@ -76,8 +80,9 @@ export default function Home() {
                                     <div className='blog_info'>
                                           <h3> <a href='#'>Slim & Sleek: Top 10 Treadmills to fit into Narrow Spaces </a></h3>
                                           <p>We were recently contacted by a world-renowned interior designer as their client required a narrow…</p>
-                                          <button>READ MORE
+                                          <button><Link to='/BlogDetail'>READ MORE
                                                 <i class="fa-solid fa-arrow-right-long"></i>
+                                                </Link>
                                           </button>
                                     </div>
                               </div>
@@ -86,8 +91,9 @@ export default function Home() {
                                     <div className='blog_info'>
                                           <h3> <a href='#'>Tips for caring and maintaining your wood floor </a></h3>
                                           <p>We were recently contacted by a world-renowned interior designer as their client required a narrow…</p>
-                                          <button>READ MORE
+                                          <button><Link to='/BlogDetail'>READ MORE
                                                 <i class="fa-solid fa-arrow-right-long"></i>
+                                                </Link>
                                           </button>
                                     </div>
                               </div>
@@ -147,6 +153,21 @@ export default function Home() {
                               </div>
                         </div>
                   </div>
+                  <div className='slides'>
+                        <div className='slide1 col1'>
+                            <img src={logo1}/>
+                        </div>
+                        <div className='slide1 col2'>
+                        <img src={logo2}/>
+                        </div>
+                        <div className='slide1 col3'>
+                        <img src={logo3}/>
+                        </div>
+                        <div className='slide1 col4'>
+                        <img src={logo4}/>
+                        </div>
+                  </div>
+                  
                   <Footer />
             </>
       )
