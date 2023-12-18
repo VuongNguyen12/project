@@ -17,7 +17,24 @@ import { useRef } from 'react';
 
 
 
-export default function Header() {
+export default function Header({ cartCount }) {
+   //count_number
+   const [count, setCount] = useState(cartCount);
+ 
+   const add=()=>{
+    setCount(prevcount => prevcount + 1);
+        cartCount=setCount(count)
+        console.log(cartCount)
+   }
+   const move=()=>{
+       if(count>0){
+        setCount(prevcount => prevcount- 1);
+        cartCount=setCount(count)
+           console.log(cartCount)
+           
+       }
+      
+       }
   //cart_Ref
   const cartRef = useRef();
   const Click_cart = () => {
@@ -51,9 +68,12 @@ export default function Header() {
       <Navbar expand="md" >
         <NavbarBrand href="/">KINGSPORTS</NavbarBrand>
         <div className='header_right1'>
-          <i onClick={toggle1} className="fa-solid fa-magnifying-glass" ></i>
-          <a className="me-3 ms-3" href='/account'>My Account</a>
-          <i className="fa-solid fa-cart-plus"></i>
+        <i onClick={toggle1} className="fa-solid fa-magnifying-glass" ></i>
+          <Link className="me-3 ms-3" to='/account'>My Account</Link>
+        <div className='cart_number'>
+        <i onClick={Click_cart} className="fa-solid fa-cart-plus"></i>
+        <span className="cart-count">{cartCount}</span>
+        </div>
         </div>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen0} className=" justify-content-center" navbar>
@@ -109,9 +129,9 @@ export default function Header() {
         <div className='header_right'>
           <i onClick={toggle1} className="fa-solid fa-magnifying-glass" ></i>
           <Link className="me-3 ms-3" to='/account'>My Account</Link>
-        <div>
+        <div className='cart_number'>
         <i onClick={Click_cart} className="fa-solid fa-cart-plus"></i>
-          <span>0</span>
+        <span className="cart-count">{cartCount}</span>
         </div>
          
         </div>
@@ -143,6 +163,11 @@ export default function Header() {
                <button onClick={Click_cart}>X close</button>
                </div>
               <h6>There are no products in the cart yet.</h6>
+              <div className='number'>
+                                <div className='number_count'>
+                                    {cartCount}
+                                </div>
+                            </div>
               <button className='back'><Link to='/Shop'>BACK TO SHOP</Link></button>
             </div>
           

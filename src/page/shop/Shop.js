@@ -16,6 +16,8 @@ import Ralated_product from '../../components/Ralated_product/Ralated_product'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 export default function Shop() {
+    const [cartCount, setCartCount] = useState(0);
+
     const [weight, setWeight] = useState(15);
     const changeWeight = (event) => {
         setWeight(event.target.value);
@@ -40,7 +42,7 @@ export default function Shop() {
     }, [])
     return (
         <div className='Shop'>
-            <Header />
+          <Header cartCount={cartCount} />
             <Container>
                 <Row style={{marginRight:"0px"}}>
                     <h1>Recent products</h1>

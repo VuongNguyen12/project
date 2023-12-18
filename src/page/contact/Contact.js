@@ -2,10 +2,12 @@ import { Container } from 'reactstrap';
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 import './Contact.css';
+import { useState } from 'react';
 export default function Contact() {
+    const [cartCount, setCartCount] = useState(0);
     return (
         <>
-            <Header />
+           <Header cartCount={cartCount} />
             <Container>
                 <div className='text_contact'>
                     <h1>Local stores</h1>

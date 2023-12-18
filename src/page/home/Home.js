@@ -27,7 +27,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
-
+      const [cartCount, setCartCount] = useState(0);
 
 
 
@@ -36,7 +36,7 @@ export default function Home() {
             <>
                   
                   <div className='Header_menu'>
-                  <Header />
+                  <Header cartCount={cartCount} />
                   <Banner1 />
                   </div>
                   <Products />

@@ -4,10 +4,12 @@ import Header from '../../components/header/Header';
 import './BlogDetail.css';
 import blog1 from '../../img/blog1.jpg';
 import blog2 from '../../img/blog2.jpg';
+import { useState } from 'react';
 export default function BlogDetail() {
+    const [cartCount, setCartCount] = useState(0);
     return (
         <>
-            <Header />
+          <Header cartCount={cartCount} />
             <Container>
                 <div className='Blog'>
                     <h1>How to Smoke MonRocks, Cannabis</h1>

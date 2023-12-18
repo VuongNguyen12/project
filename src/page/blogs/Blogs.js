@@ -14,6 +14,8 @@ import { useEffect, useState } from 'react'
 import Blog from '../../components/blog/Blog'
 import { Container, Row } from 'reactstrap'
 export default function Blogs(){
+  const [cartCount, setCartCount] = useState(0);
+
   const arr1=[insta1,insta2,insta3,insta4,insta5,insta6,insta7,insta8]
   const url = "https://654d2f7277200d6ba85a1b89.mockapi.io/Blogs";
     const [data1, setData1] = useState([]);
@@ -29,7 +31,7 @@ export default function Blogs(){
       }, [])
     return(
         <>
-       <Header/>
+      <Header cartCount={cartCount} />
        <Container>
         <Row>
          

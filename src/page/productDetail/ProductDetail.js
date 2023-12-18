@@ -67,13 +67,17 @@ export default function ProductDetail() {
         navref.current.classList.toggle("active"+x)
     };
     //update_cart
-    const update_cart=()=>{
-        
-    }
+    const [cartCount, setCartCount] = useState(0);
+
+	const addToCartHandler = () => {
+        setCartCount(0);
+        	setCartCount((prevCartCount) => prevCartCount+count);
+           
+   	 };
 
     return (
         <div className='ProductDetail'>
-            <Header />
+            <Header cartCount={cartCount} />
             <Container style={{ marginTop: '50px' }}>
                 <Row>
                     <Col sm="12" md="6">
@@ -176,9 +180,9 @@ export default function ProductDetail() {
 
                                 </div>
                             </div>
-                            <button onClick={update_cart} className='add'>
+                            <button onClick={addToCartHandler} className="add">
                                 ADD TO CARD
-                            </button>
+	</button>
                         </div>
                         <p>Categories: Dumbbells, Health monitoring, Healthy food</p>
                         <p>Tags: Food, Gym, Sport</p>

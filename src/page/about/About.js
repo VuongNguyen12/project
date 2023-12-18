@@ -15,6 +15,8 @@ import about5 from '../../img/about5.png'
 import about6 from '../../img/about6.png'
 import { useEffect, useState } from 'react'
 export default function About() {
+    const [cartCount, setCartCount] = useState(0);
+
     const [time, setTime] = useState('');
     const day = new Date().getYear();
     const hours = new Date().getHours();
@@ -30,7 +32,7 @@ export default function About() {
     }, [time]);
     return (
         <>
-            <Header />
+           <Header cartCount={cartCount} />
             <Container>
                 <Row>
                     <Col sm="12" style={{textAlign:"center"}}><h1 style={{marginBottom:"50px"}}>About us </h1></Col>

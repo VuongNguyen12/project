@@ -3,10 +3,12 @@ import Footer from '../../components/footer/Footer'
 import Header from '../../components/header/Header'
 import './Account.css'
 import insta6 from '../../img/insta6.png'
+import { useState } from 'react'
 export default function Account() {
+    const [cartCount, setCartCount] = useState(0);
     return (
         <>
-            <Header />
+         <Header cartCount={cartCount} />
             <Container>
                 <div className='account'>
                     <h4>Account</h4>
